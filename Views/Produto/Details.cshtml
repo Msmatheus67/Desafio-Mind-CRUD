@@ -1,0 +1,38 @@
+﻿@model Desafio_Mind_CRUD.Models.ProdutoModel
+
+@{
+    ViewData["Title"] = "Detalhes do Produto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="pt-2">
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd class = "col-sm-10">
+           R$ @Html.DisplayFor(model => model.Preco)
+        </dd>
+    </dl>
+    <hr />
+</div>
+<div>
+    <a class ="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+</div>
+<div>
+    <a class="btn pt-3" asp-action="Index"><i class="fa fa-chevron-circle-left"></i> Voltar</a>
+</div>
